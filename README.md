@@ -26,7 +26,7 @@ Basically run:
 
 $ python run_CIL.py
 
-Note that you must have a carla server running  <br>
+Note that you must have a carla server running . <br>
 To check the other options run
 
 $ python run_CIL.py --help
@@ -35,17 +35,17 @@ $ python run_CIL.py --help
 Dataset
 ------
 
-[The dataset can be downloaded here](https://drive.google.com/file/d/1hloAeyamYn-H6MfV1dRtY1gJPhkR55sY/view) 14 GB
+[The dataset can be downloaded here](https://drive.google.com/file/d/1hloAeyamYn-H6MfV1dRtY1gJPhkR55sY/view) 24 GB
 
-The dataset is stored on HDF5 files.
+The data is stored on HDF5 files.
 Each HDF5 file contains 200 data points.
-The HDF5 contains two datasets:
+The HDF5 contains two "datasets":
 'images_center': <br>
 The RGB images stored at 200x88 resolution
 
 'targets': <br>
 All the controls and measurements collected. 
-They are stored on the dataset vector.
+They are stored on the "dataset" vector.
 
 1. Steer, float 
 2. Gas, float
@@ -71,7 +71,7 @@ They are stored on the dataset vector.
 22. Orientation X, float 
 23. Orientation Y, float 
 24. Orientation Z, float 
-25. Control signal, int ( 2 Follow lane, 3 Left, 4 Right, 5 Straight) 
+25. High level command, int ( 2 Follow lane, 3 Left, 4 Right, 5 Straight) 
 26. Noise, Boolean ( If the noise, perturbation, is activated) 
 27. Camera ( which camera was used) 
 
@@ -81,18 +81,20 @@ They are stored on the dataset vector.
 Paper
 -----
 
-If you use the conditional imitation learning, please cite our Arxiv paper.
+If you use the conditional imitation learning, please cite our ICRA 2018 paper.
 
-End-to-end driving via conditional imitation learning, <br>
-Codevilla, Felipe and Müller, Matthias and Dosovitskiy, Alexey and López, Antonio and Koltun, Vladlen;  <br> arXiv preprint arXiv:1710.02410
+End-to-end Driving via Conditional Imitation Learning. <br> Codevilla,
+Felipe and Müller, Matthias and López, Antonio and Koltun, Vladlen and
+Dosovitskiy, Alexey. ICRA 2018
 [[PDF](http://vladlen.info/papers/conditional-imitation.pdf)]
 
 
 ```
-@article{codevilla2017end,
-  title={End-to-end driving via conditional imitation learning},
-  author={Codevilla, Felipe and M{\"u}ller, Matthias and Dosovitskiy, Alexey and L{\'o}pez, Antonio and Koltun, Vladlen},
-  journal={arXiv preprint arXiv:1710.02410},
-  year={2017}
+@inproceedings{Codevilla2018,
+  title={End-to-end Driving via Conditional Imitation Learning},
+  author={Codevilla, Felipe and M{\"u}ller, Matthias and L{\'o}pez,
+Antonio and Koltun, Vladlen and Dosovitskiy, Alexey},
+  booktitle={International Conference on Robotics and Automation (ICRA)},
+  year={2018},
 }
 
